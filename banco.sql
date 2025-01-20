@@ -1,0 +1,5 @@
+CREATE TABLE Autores (
+ autor_id INT AUTO_INCREMENT PRIMARY KEY,
+ nome VARCHAR(100) NOT NULL,
+ pais VARCHAR(50)
+);

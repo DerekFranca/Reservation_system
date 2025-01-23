@@ -4,7 +4,7 @@ class Database
 {
     // Propriedades que armazenam as informações de conexão com o banco de dados
     private $server = "localhost"; // Endereço do servidor MySQL (geralmente localhost)
-    private $dbnome = "turma31";   // Nome do banco de dados
+    private $dbnome = "reserva";   // Nome do banco de dados
     private $user = "root";        // Nome de usuário para conexão com o banco de dados (usuário padrão 'root' no MySQL)
     private $pass = "";            // Senha do usuário para conexão com o banco de dados (em branco para 'root' no local)
 

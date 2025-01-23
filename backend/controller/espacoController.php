@@ -29,7 +29,7 @@ class EspacoController
     public function CreateEspaco($nome, $tipo, $capacidade, $descricao)
     {
         try {
-            $sql = "INSERT INTO espaco (nome, tipo, capacidade, descricao) 
+            $sql = "INSERT INTO espacos (nome, tipo, capacidade, descricao) 
                     VALUES (:nome, :tipo, :capacidade, :descricao)";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":nome", $nome);

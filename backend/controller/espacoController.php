@@ -70,7 +70,7 @@ class EspacoController
     public function UpdateEspaco($id, $nome, $tipo, $capacidade, $descricao)
     {
         try {
-            $sql = "UPDATE espaco SET nome = :nome, tipo = :tipo, capacidade = :capacidade, descricao = :descricao WHERE id = :id";
+            $sql = "UPDATE espacos SET nome = :nome, tipo = :tipo, capacidade = :capacidade, descricao = :descricao WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":nome", $nome);
             $db->bindParam(":tipo", $tipo);
@@ -92,7 +92,7 @@ class EspacoController
     public function GetEspacoById($id)
     {
         try {
-            $sql = "SELECT * FROM espaco WHERE id = :id";
+            $sql = "SELECT * FROM espacos WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":id", $id);
             $db->execute();

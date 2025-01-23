@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $tipo = $_POST['tipo'];
         $capacidade = $_POST['capacidade'];
         $descricao = $_POST['descricao'];
-        $espacoController->CreateEspaco($nome, $tipo, $capacidade, $descricao);
-    } elseif (($_POST['update'])) {
+         $espacoController->CreateEspaco($nome, $tipo, $capacidade, $descricao);
+    } elseif (($_GET['acao'] == 'update' )) {
         // Editar um espaço existente
         $id = $_POST['id'];
         $nome = $_POST['nome'];
@@ -101,7 +101,7 @@ $espacos = $espacoController->GetAllEspacos();
         $espaco = $espacoController->GetEspacoById($id);
     ?>
         <h2>Editar Espaço</h2>
-        <form action="espacos.php" method="POST">
+        <form action="espacos.php?acao=update" method="POST">
             <input type="hidden" name="id" value="<?php echo $espaco['id']; ?>">
 
             <label for="nome">Nome:</label>

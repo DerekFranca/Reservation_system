@@ -13,7 +13,7 @@ class UserController
 
     public function GetAllUser(){
         try {
-            $sql = "SELECT * FROM usuario";
+            $sql = "SELECT * FROM usuarios";
             $db = $this->conn->prepare($sql);
             $db->execute();
             $user = $db->fetchAll(PDO::FETCH_ASSOC);
@@ -23,14 +23,15 @@ class UserController
         }
     }
 
-    public function CreateUser($nome, $senha){
+    public function CreateUser($nome, $email, $telefone){
         try {
 
            
-            $sql = "INSERT INTO usuario (nome,senha) VALUES(:nome,:senha)";
+            $sql = "INSERT INTO usuarios (nome,email,telefone) VALUES(:nome,:email,:telefone)";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":nome", $nome);
-            $db->bindParam(":senha", $senha);
+            $db->bindParam(":email", $email);
+            $db->bindParam(":telefone", $telefone);
             if($db->execute()){
                 return true;
             }else{
@@ -43,7 +44,7 @@ class UserController
 
     public function DeleteUser($id){
         try {
-            $sql = "DELETE FROM usuario WHERE id = :id";
+            $sql = "DELETE FROM usuarios WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":id", $id);
             if($db->execute()){
@@ -57,12 +58,13 @@ class UserController
     }
 
 
-    public function UpdateUser($id,$nome, $senha){
+    public function UpdateUser($id,$nome, $email, $telefone){
         try {
-            $sql = "UPDATE usuario SET nome = :nome, senha = :senha WHERE id = :id";
+            $sql = "UPDATE usuarios SET nome = :nome, email = :email, telefone = :telefone WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":nome", $nome);
-            $db->bindParam(":senha", $senha);
+            $db->bindParam(":email", $email);
+            $db->bindParam(":telefone", $telefone);
             $db->bindParam(":id", $id);
             if($db->execute()){
                 return true;
@@ -76,7 +78,7 @@ class UserController
 
     public function GetUserById($id){
         try {
-            $sql = "SELECT * FROM usuario WHERE id = :id";
+            $sql = "SELECT * FROM usuarios WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":id", $id);
             $db->execute();

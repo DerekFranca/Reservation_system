@@ -52,7 +52,7 @@ class EspacoController
     public function DeleteEspaco($id)
     {
         try {
-            $sql = "DELETE FROM espaco WHERE id = :id";
+            $sql = "DELETE FROM espacos WHERE id = :id";
             $db = $this->conn->prepare($sql);
             $db->bindParam(":id", $id);
 

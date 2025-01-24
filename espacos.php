@@ -39,12 +39,14 @@ $espacos = $espacoController->GetAllEspacos();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Espaços</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <h1>Cadastro de Espaços</h1>
 
     <!-- Formulário de Cadastro -->
-    <h2>Cadastrar Novo Espaço</h2>
+    <div class="formulario">
+        <h2>Cadastrar Novo Espaço</h2>
     <form action="espacos.php?acao=create" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" required><br><br>
@@ -58,16 +60,17 @@ $espacos = $espacoController->GetAllEspacos();
         <label for="descricao">Descrição:</label>
         <textarea name="descricao" id="descricao" required></textarea><br><br>
 
-        <button type="submit" name="create">Cadastrar</button>
+        <button class="botaocadastro" type="submit" name="create">Cadastrar</button>
     </form>
+    </div>
 
     <hr>
 
     <!-- Listar Espaços Cadastrados -->
     <h2>Espaços Cadastrados</h2>
-    <table border="1">
+    <table>
         <thead>
-            <tr>
+            <tr class="lista">
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Tipo</th>

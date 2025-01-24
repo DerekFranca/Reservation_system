@@ -40,3 +40,62 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: aliceblue;
 }
+
+
+.formulario{
+    background-color: rgb(101, 122, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.botaocadastro{
+    border-radius: 10px;
+    height: 50px;
+    width: 135px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: larger;
+    margin-left: 60px;
+
+}
+
+input{
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+
+}
+
+
+.lista{
+    background-color:rgb(101, 122, 115);
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+table{
+    border: 2px solid black;
+}

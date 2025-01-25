@@ -23,6 +23,20 @@ class UserController
         }
     }
 
+    public function GetIdByName($nome){
+        try {
+            $sql = "SELECT id FROM usuarios WHERE nome =:nome";
+            $db = $this->conn->prepare($sql);
+            $db->bindParam(":nome", $nome);
+            $db->execute();
+            $user = $db->fetchAll(PDO::FETCH_ASSOC);
+            echo var_dump($user);
+            return $user;
+        } catch (\Exception $th) {
+            return $th->getMessage();
+        }
+    }
+
     public function CreateUser($nome, $email, $telefone){
         try {
 

@@ -11,9 +11,11 @@
         <div class="meio">
         <p class="titulo">Sistema de Reservas de espaços e areas comuns</p>
         <a class="derek" href="">Derek interprise</a>
-        <Button class="botaohome">Cadastro de Espaços</Button>
-        <Button class="botaohome">Gerenciamento de Usuarios</Button>
-        <Button class="botaohome">Sistema de Reservas</Button>
+        
+        <Button class="botaohome">
+        <a href="espacos.php">Cadastro de Espaços</a></Button>
+        <Button class="botaohome"><a href="indexUser.php">Gerenciamento de Usuarios</a></Button>
+        <Button class="botaohome"><a href="reserva.php">Sistema de Reservas</a></Button>
         </div>
 
 </div>

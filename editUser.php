@@ -28,8 +28,9 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Usuário</title>
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="bodyeditar">
     <h1>Editar Usuário</h1>
     <form method="POST">
         <input type="hidden" name="id" value="<?= $user['id'] ?>">
@@ -43,7 +44,7 @@ if (isset($_GET['id'])) {
         <label for="telefone">Telefone:</label>
         <input type="text" name="telefone" id="telefone" value="<?= $user['telefone'] ?>" required><br><br>
 
-        <button type="submit">Salvar</button>
+        <button class="botaoeditar" type="submit">Salvar</button>
     </form>
 </body>
 </html>

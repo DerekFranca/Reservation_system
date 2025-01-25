@@ -20,9 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="cadastropagina">
     <h1>Cadastrar Novo Usuário</h1>
+    <div class="meio">
     <form method="POST">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" required><br><br>
@@ -33,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="telefone">Telefone:</label>
         <input type="text" name="telefone" id="telefone" required><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <button class="botaocadastro" type="submit">Cadastrar</button>
     </form>
+    </div>
 </body>
 </html>

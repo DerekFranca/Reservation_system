@@ -9,13 +9,14 @@ $users = $userController->GetAllUser();
 <head>
     <meta charset="UTF-8">
     <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="userpagina">
     <h1>Lista de Usuários</h1>
-    <a href="createUser.php">Cadastrar Novo Usuário</a>
-    <table border="1">
+    <a href="createUser.php"><button class="botaousuario">Cadastrar Novo Usuário</button></a>
+    <table class="meioindexuser">
         <thead>
-            <tr>
+            <tr class="lista">
                 <th>ID</th>
                 <th>Nome</th>
                 <th>E-mail</th>
@@ -30,8 +31,8 @@ $users = $userController->GetAllUser();
                         <td><?= $user['nome'] ?></td>
                         <td><?= $user['email'] ?></td>
                         <td>
-                            <a href="editUser.php?id=<?= $user['id'] ?>">Editar</a>
-                            <a href="deleteUser.php?id=<?= $user['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                            <a href="editUser.php?id=<?= $user['id'] ?>"><button>Editar</button></a>
+                            <a href="deleteUser.php?id=<?= $user['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')"><button>Excluir</button></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

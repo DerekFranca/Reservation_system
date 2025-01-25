@@ -16,8 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="bodyeditar">
     <h1>Listar Reservas</h1>
 
     <form method="GET">

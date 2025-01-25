@@ -19,8 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Reserva</title>
+    <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="bodyeditar">
     <h1>Criar Nova Reserva</h1>
     
     <?php if (isset($message)) { echo "<p>$message</p>"; } ?>
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="hora_fim">Hora de Término:</label><br>
         <input type="time" id="hora_fim" name="hora_fim" required><br><br>
         
-        <button type="submit">Criar Reserva</button>
+        <button class="botaocriar" type="submit">Criar Reserva</button>
     </form>
 </body>
 </html>

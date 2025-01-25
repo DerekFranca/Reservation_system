@@ -189,3 +189,35 @@ a{
     margin-left: 60px;
     
 }
+
+.reserva{
+    background-color: rgb(101, 122, 115);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botaoreserva{
+    border-radius: 10px;
+    height: 50px;
+    width: 135px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: larger;
+    margin-left: 60px;
+}
+
+.botaocriar{
+    border-radius: 10px;
+    height: 50px;
+    width: 135px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: larger;
+    margin-left: 60px;
+}
+
